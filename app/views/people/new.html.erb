@@ -2,29 +2,4 @@
   <h1>New Person</h1>
 </div>
 
-<%= form_for @person, html: {class: "form-horizontal"} do |f| %>
-  <div class="form-group">
-    <%= f.label :first_name, class: "control-label col-sm-2" %>
-    <div class="col-sm-4">
-      <%= f.text_field :first_name, class: "form-control" %>
-    </div>
-  </div>
-  <div class="form-group">
-    <%= f.label :last_name, class: "control-label col-sm-2" %>
-    <div class="col-sm-4">
-      <%= f.text_field :last_name, class: "form-control" %>
-    </div>
-  </div>
-  <div class="form-group">
-    <%= f.label :date_of_birth, class: "control-label col-sm-2" %>
-    <div class="col-sm-4">
-      <%= f.date_field :date_of_birth, class: "form-control" %>
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="col-sm-4 col-sm-offset-2">
-      <%= f.submit class: "btn btn-primary" %>
-      <%= link_to "cancel", people_path, class: "btn btn-default" %>
-    </div>
-  </div>
-<% end %>
+<%= render "form" %>
